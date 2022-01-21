@@ -1,14 +1,15 @@
 <body>
     <button type="button" id="btnDownload">Download</button>
     <canvas id="myCanvas" width="640" height="480" style="border: 2px solid #000; float: left;"></canvas>
+<!--
     <canvas id="myCanvas2" width="640" height="480" style="border: 2px solid #000; float: left;"></canvas>
     <img src="220c656e.jpg" id="imgConverted" style="float: left; border: 2px solid #00f; margin-left: 10px;">
-
+-->
     <script>
         const btnDownload = document.querySelector("#btnDownload");
         const myCanvas = document.querySelector("#myCanvas");
-        const myCanvas2 = document.querySelector("#myCanvas2");
-        const imgConverted = document.querySelector("#imgConverted");
+        //const myCanvas2 = document.querySelector("#myCanvas2");
+        //const imgConverted = document.querySelector("#imgConverted");
         const ctx = myCanvas.getContext("2d");
 
         var background = new Image();
@@ -21,8 +22,8 @@
             ctx.drawImage(imgConverted,0,0);
             ctx.font = "50px Roboto";
             ctx.fillStyle = "red";
-            ctx.fillText("LTest1629", 100, 100);
-            ctx.fillRect(200, 150, 150, 75);
+            ctx.fillText("LTest1854", 100, 100);
+            //ctx.fillRect(200, 150, 150, 75);
         }
 
 
