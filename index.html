@@ -7,6 +7,7 @@
     <img src="220c656e.jpg" id="imgConverted" style="float: left; border: 2px solid #00f; margin-left: 10px;">
 
     <script>
+        
         const btnDownload = document.querySelector("#btnDownload");
         const myCanvas = document.querySelector("#myCanvas");
         //const myCanvas2 = document.querySelector("#myCanvas2");
@@ -23,17 +24,28 @@
             ctx.drawImage(imgConverted,0,0);
             ctx.font = "50px Roboto";
             ctx.fillStyle = "red";
-            ctx.fillText("LTest1903", 100, 100);
+            ctx.fillText("LTest1911", 100, 100);
             //ctx.fillRect(200, 150, 150, 75);
         }
-
-
         const a = document.createElement("a");
+
+        function drawAndSave(n) {
+            for (var i = 0; i <= n; i++) {
+                ctx.drawImage(imgConverted,0,0);
+                ctx.font = "50px Roboto";
+                ctx.fillText("i", 100, 100);
+                a.href = myCanvas.toDataURL();
+                a.download = "1test.png";
+                a.click();
+            }
+
+        }
         btnDownload.addEventListener("click", function(){
             //document.body.appendChild(a);
             a.href = myCanvas.toDataURL();
             a.download = "1test.png";
             a.click();
+            drawAndSave(3);
             //document.body.removeChild(a);
         });
     </script>
