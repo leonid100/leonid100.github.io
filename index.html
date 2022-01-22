@@ -21,7 +21,7 @@
             ctx.drawImage(background,0,0);
             ctx.font = "50px Roboto";
             ctx.fillStyle = "red";
-            ctx.fillText("LTest0018", 100, 100);
+            ctx.fillText("LTest0022", 100, 100);
         }
         const a = document.createElement("a");
 
@@ -37,8 +37,8 @@
         }
 
         btnDownload.addEventListener("click", function(){
-            var from = document.querySelector("#from");
-            var to = document.querySelector("#to");
+            var from = document.querySelector("#from").value;
+            var to = document.querySelector("#to").value;
             //document.body.appendChild(a);
             a.href = myCanvas.toDataURL();
             a.download = "1test.png";
